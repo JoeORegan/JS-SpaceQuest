@@ -1,3 +1,9 @@
+# Space Quest JS
+
+![GitHub repo size](https://img.shields.io/github/repo-size/JoeORegan/JS-SpaceQuest?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/JoeORegan/JS-SpaceQuest?style=flat-square)
+![Stars](https://img.shields.io/github/stars/JoeORegan/JS-SpaceQuest?style=social)
+
 See app on:
 
 - [Render](https://spacequest.onrender.com/ "See app on Render")
@@ -5,7 +11,7 @@ See app on:
 
 ---
 
-# Space Quest JavaScript
+## Space Quest JavaScript
 
 Space Quest game ported to JavaScript from fourth-year Platform Game Development module. Originally coded as a cross-platform Android/PC/iOS game using Cocos2d-x.
 
