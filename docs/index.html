@@ -1,50 +1,60 @@
 <!DOCTYPE html>
-<html lang="en-IE">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="author" content="Joe O'Regan" />
-    <meta name="description" content="Space Quest JavaScript Game" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Space Quest JS - by Joe O'Regan" />
-    <meta
-      property="og:description"
-      content="JavaScript version of Space Quest game. Originally created as a cross-platform game in C++ using the Cocos2d-x framework."
-    />
-    <meta
-      property="og:image"
-      content="https://raw.githubusercontent.com/joeaoregan/LIT-SpaceQuestJS/master/docs/images/thumbnail-1200x627-spacequest.jpg"
-    />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="627" />
-    <meta
-      name="twitter:description"
-      content="JavaScript version of Space Quest game. Originally created as a cross-platform game in C++ using the Cocos2d-x framework."
-    />
-    <meta
-      name="twitter:image"
-      content="https://raw.githubusercontent.com/joeaoregan/LIT-Yr4-PlatformGameDevelopment/master/Screenshots/SpaceGame1SplashScreenNEW.png"
-    />
-    <title>Space Quest JS</title>
+<html lang="en-IE" data-theme="dark">
 
-    <!--[if lt IE 9]>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="author" content="Joe O'Regan" />
+  <meta name="description" content="Space Quest JavaScript Game" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Space Quest JS - by Joe O'Regan" />
+  <meta property="og:description"
+    content="JavaScript version of Space Quest game. Originally created as a cross-platform game in C++ using the Cocos2d-x framework." />
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/joeaoregan/LIT-SpaceQuestJS/master/docs/images/thumbnail-1200x627-spacequest.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="627" />
+  <meta name="twitter:description"
+    content="JavaScript version of Space Quest game. Originally created as a cross-platform game in C++ using the Cocos2d-x framework." />
+  <meta name="twitter:image"
+    content="https://raw.githubusercontent.com/joeaoregan/LIT-Yr4-PlatformGameDevelopment/master/Screenshots/SpaceGame1SplashScreenNEW.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Space Quest JS</title>
+
+  <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link href="css/styles.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-  </head>
+  <link href="css/styles.css" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+</head>
 
-  <body>
-    <h1>Space Quest JavaScript</h1>
-    <h3>by Joe O'Regan</h3>
+<body>
+  <header class="topbar">
+    <div class="container topbar-row">
+      <nav class="topnav" aria-label="Main navigation">
+        <a class="nav-link" href="https://joeoregan.github.io/">Home</a>
+        <a class="nav-link active" href="./">SpaceQuest</a>
+      </nav>
 
-    <div>
-      <canvas id="spacequest" width="1280" height="720"></canvas>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark/light theme">
+        Toggle Theme
+      </button>
     </div>
+  </header>
 
-    <div>
-      <h1>Info</h1>
-      <h2>Press Space to start</h2>
+  <main class="container page-content">
+    <section class="page-panel">
+      <h1>Space Quest JavaScript</h1>
+      <h3>by Joe O'Regan</h3>
+
+      <div class="canvas-wrap">
+        <canvas id="spacequest" width="1280" height="720"></canvas>
+      </div>
+    </section>
+
+    <section class="page-panel info-panel">
+      <h2>Info</h2>
+      <h3>Press Space to start</h3>
       <ul>
         <li><b>Menu</b>: asdw + arrow keys</li>
         <li><b>Fire/Select Menu Option</b>: space</li>
@@ -54,19 +64,39 @@
         <li>Different enemy ships added each level</li>
         <li>4 levels</li>
       </ul>
-    </div>
-    <script src="Controller.js"></script>
-    <script src="GameObject.js"></script>
-    <script src="HUD.js"></script>
-    <script src="Enemy.js"></script>
-    <script src="Asteroid.js"></script>
-    <script src="Background.js"></script>
-    <script src="Laser.js"></script>
-    <script src="Player.js"></script>
-    <script src="State.js"></script>
-    <script src="Splash.js"></script>
-    <script src="Menu.js"></script>
-    <script src="Level.js"></script>
-    <script src="Game.js"></script>
-  </body>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      const saved = localStorage.getItem("sq-theme");
+      if (saved === "light" || saved === "dark") {
+        document.documentElement.setAttribute("data-theme", saved);
+      }
+
+      const btn = document.getElementById("themeToggle");
+      btn.addEventListener("click", function () {
+        const current = document.documentElement.getAttribute("data-theme") || "dark";
+        const next = current === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        localStorage.setItem("sq-theme", next);
+      });
+    })();
+  </script>
+
+  <script src="Controller.js"></script>
+  <script src="GameObject.js"></script>
+  <script src="HUD.js"></script>
+  <script src="Enemy.js"></script>
+  <script src="Asteroid.js"></script>
+  <script src="Background.js"></script>
+  <script src="Laser.js"></script>
+  <script src="Player.js"></script>
+  <script src="State.js"></script>
+  <script src="Splash.js"></script>
+  <script src="Menu.js"></script>
+  <script src="Level.js"></script>
+  <script src="Game.js"></script>
+</body>
+
 </html>
