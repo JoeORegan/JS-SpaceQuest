@@ -7,7 +7,7 @@
 See app on:
 
 - [Render](https://spacequest.onrender.com/ "See app on Render")
-- [GitHub Pages](https://joeaoregan.github.io/LIT-SpaceQuestJS/ "See app on GitHub Pages")
+- [GitHub Pages](https://joeoregan.github.io/JS-SpaceQuest/ "See app on GitHub Pages")
 
 ---
 
