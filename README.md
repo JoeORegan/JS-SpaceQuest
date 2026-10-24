@@ -4,6 +4,11 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/JoeORegan/JS-SpaceQuest?style=flat-square)
 ![Stars](https://img.shields.io/github/stars/JoeORegan/JS-SpaceQuest?style=social)
 
+<div align="center">
+<img src="docs/images/svg/logo.svg" alt="Space Quest Animated Logo" width="360px" /> <br />
+<img src="docs/images/ChatGPT Image Sep 12, 2026, 12_53_26 PM.png" alt="Space Quest Logo" width="360px" />
+</div>
+
 See app on:
 
 - [Render](https://spacequest.onrender.com/ "See app on Render")

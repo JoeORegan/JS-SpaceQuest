@@ -12,3 +12,6 @@ coverage/
 # Inevitable render package-lock yarn warning
 
 package-lock.json
+
+# Local dev
+dev/
