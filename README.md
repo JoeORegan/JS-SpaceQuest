@@ -33,9 +33,6 @@ Space Quest game ported to JavaScript from fourth-year Platform Game Development
 </a>
 </div>
 
-
-- [Space Quest: YouTube Trailer](https://www.youtube.com/watch?feature=player_embedded&v=TVLTJW5FwQs "Space Quest: YouTube Trailer")
-
 ---
 
 ### Screenshots:
