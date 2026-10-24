@@ -26,6 +26,14 @@ Space Quest game ported to JavaScript from fourth-year Platform Game Development
 
 - [Play Web App (Work in progress)](https://spacequest.onrender.com/ "Play Render Web App (Work in progress)")
 - [Space Quest: Original Version Repo](https://github.com/joeaoregan/LIT-Yr4-PlatformGameDevelopment "Space Quest: Original Version Repo")
+
+<div align="center">
+<a href="https://www.youtube.com/watch?feature=player_embedded&v=TVLTJW5FwQs" alt="Space Quest: YouTube Trailer">
+<img src="docs/images/svg/tv_logo.svg" alt="Animated TV SVG" width="360px" />
+</a>
+</div>
+
+
 - [Space Quest: YouTube Trailer](https://www.youtube.com/watch?feature=player_embedded&v=TVLTJW5FwQs "Space Quest: YouTube Trailer")
 
 ---
